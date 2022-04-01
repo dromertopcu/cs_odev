@@ -1,0 +1,15 @@
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.csproj.AssemblyReference.cache
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.GeneratedMSBuildEditorConfig.editorconfig
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.AssemblyInfoInputs.cache
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.AssemblyInfo.cs
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.csproj.CoreCompileInputs.cache
+/Users/drot/VS Storage/cs_odev/bin/Debug/net6.0/cs_odev
+/Users/drot/VS Storage/cs_odev/bin/Debug/net6.0/cs_odev.deps.json
+/Users/drot/VS Storage/cs_odev/bin/Debug/net6.0/cs_odev.runtimeconfig.json
+/Users/drot/VS Storage/cs_odev/bin/Debug/net6.0/cs_odev.dll
+/Users/drot/VS Storage/cs_odev/bin/Debug/net6.0/cs_odev.pdb
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.dll
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/refint/cs_odev.dll
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.pdb
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/cs_odev.genruntimeconfig.cache
+/Users/drot/VS Storage/cs_odev/obj/Debug/net6.0/ref/cs_odev.dll
