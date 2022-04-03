@@ -1,0 +1,64 @@
+// Ödev - 2
+// Soru - 1: Klavyeden girilen 20 adet pozitif sayının asal ve asal olmayan olarak 2 ayrı listeye atın. (ArrayList sınıfını kullanara yazınız.)
+
+// Negatif ve numeric olmayan girişleri engelleyin.
+// Her bir dizinin elemanlarını büyükten küçüğe olacak şekilde ekrana yazdırın.
+// Her iki dizinin eleman sayısını ve ortalamasını ekrana yazdırın.
+
+using System.Collections;
+
+Console.WriteLine("Boşluk bırakarak 20 adet pozitif sayı giriniz : ");
+string[] sayılarString = Console.ReadLine().Split();
+ArrayList asalListe = new ArrayList();
+ArrayList asalOlmayanListe = new ArrayList();
+foreach (var item in sayılarString)
+{
+    bool sonuc = int.TryParse(item, out int sayi);
+    if(sonuc && sayi>0){
+
+        if(sayi==2 || sayi == 3)
+        {  
+        asalListe.Add(sayi);
+        continue; 
+        }
+        else if(sayi == 1){
+            asalOlmayanListe.Add(sayi);
+            continue;
+        }
+        int dongu = (int)Math.Round(Math.Sqrt(sayi));
+        for(int i = 2;i<=dongu;i++){
+            if(sayi%i == 0){
+                asalOlmayanListe.Add(sayi);
+                break;}
+            else if(i == dongu)
+                asalListe.Add(sayi);
+        }
+    }
+    else{
+        Console.WriteLine("Negatif ve Sayı Dışında Karakter Girmeyiniz .");
+        Environment.Exit(0);
+    }
+        
+}
+Console.WriteLine("Asal Liste : ");
+asalListe.Sort();
+asalListe.Reverse();
+int toplamAsal = 0;
+int toplamAsalOlmayan = 0;
+foreach (int item in asalListe)
+{
+    toplamAsal += item;
+    Console.WriteLine(item);
+
+}
+Console.WriteLine($"Asal Liste Eleman Sayısı {(asalListe.Count).ToString()} , Elemanların Ortalaması {(toplamAsal/asalListe.Count).ToString()} .");
+Console.WriteLine("Asal Olmayan Liste : ");
+asalOlmayanListe.Sort();
+asalOlmayanListe.Reverse();
+foreach (int item in asalOlmayanListe)
+{   
+    toplamAsalOlmayan += item;
+    Console.WriteLine(item);
+}
+
+Console.WriteLine($"Asal Olmayan Liste Eleman Sayısı {(asalOlmayanListe.Count).ToString()} , Elemanların Ortalaması {(toplamAsalOlmayan/asalOlmayanListe.Count).ToString()} .");

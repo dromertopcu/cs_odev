@@ -1,0 +1,19 @@
+// Soru - 3: Klavyeden girilen cümle içerisindeki sesli harfleri bir dizi içerisinde saklayan ve dizinin elemanlarını sıralayan programı yazınız.
+using System.Collections;
+
+string cumle = "";
+char[] chars = {'a','e','o','ö','u','ü','ı','i','A','E','I','İ','O','Ö','U','Ü'};
+ArrayList dizi = new ArrayList();
+Console.WriteLine("Bir cümle giriniz: ");
+cumle = Console.ReadLine();
+foreach(char item in cumle)
+{
+    if(chars.Contains(item))
+        dizi.Add(item);
+}
+dizi.Sort();
+foreach(var item in dizi)
+{
+    Console.Write($"{item.ToString()}\t");
+}
+Console.Write("\n");

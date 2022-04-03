@@ -1,0 +1,30 @@
+// Soru - 2: Klavyeden girilen 20 adet sayının en büyük 3 tanesi ve en küçük 3 tanesi bulan, her iki grubun kendi içerisinde ortalamalarını alan ve bu ortalamaları ve ortalama toplamlarını console'a yazdıran programı yazınız. (Array sınıfını kullanarak yazınız.)
+
+using System.Collections;
+
+Console.WriteLine("Boşluk bırakarak 20 adet pozitif sayı giriniz : ");
+string[] sayılarString = Console.ReadLine().Split();
+ArrayList liste = new ArrayList();
+ArrayList minListe = new ArrayList();
+ArrayList maxListe = new ArrayList();
+foreach (var item in sayılarString)
+{
+    bool sonuc = int.TryParse(item, out int sayi);
+    if(sonuc)
+        liste.Add(sayi);
+    else{
+        Console.WriteLine("Sayı Dışında Karakter Girmeyiniz .");
+        Environment.Exit(0);
+    }
+}
+liste.Sort();
+minListe.AddRange(liste.GetRange(0,3));
+liste.Reverse();
+maxListe.AddRange(liste.GetRange(0,3));
+int toplamMin = 0;
+int toplamMax = 0;
+for(int i=0;i<3;i++){
+    toplamMin += (int)minListe[i];
+    toplamMax += (int)maxListe[i];
+}
+Console.WriteLine("En küçük 3 sayının ortalaması: {0}\nEn büyük 3 sayının ortalaması: {1}\nOrtalamalarının Toplamı : {2}",toplamMin/3f,toplamMax/3f,(toplamMin+toplamMax)/3f);
